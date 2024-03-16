@@ -2,10 +2,8 @@
 git add .			Them file moi
 git commit -m "message"		Them content change
 git push			Day len github
-
-git fetch			Xem có sự thay đổi mới không
-git pull
-git checkout brachName		Chuyen đến brachName
+git push origin branch_name	Day len branchName của github 
+git checkout brachName		Chuyen đến branchName
 
 Khi có thay đổi trên nhánh khác, mà muốn kết hợp:
 	+ git merge brachName		//Kết hợp brachName vào brach main
@@ -19,5 +17,17 @@ Khi có sự thay đổi mới nhưng không muốn đẩy lên git hoặc chuy�
 	+ git restore .
 	+(or) git reset --h	(chỉ xóa các status thay đổi ở file đã tồn tại)
 	+ git clean -dxf	(xóa status là các file mới được tạo)
+	+ git clean --force	//Xóa toàn bộ file chưa commit
 Xem lại các commit:
 	+ git log
+
+Sửa lại comment của commit gần nhất
+	+ git --amend
+Thêm file vào commit gần nhất
+	+ git commit --amend
+
+Khi sửa file mà muốn file trở về như cũ:
+	+ git checkout -- file_name
+	+ git reset --soft HEAD~1	//Xóa 1 commit hiện tại (HEAD) và giữ nguyên thay đổi chưa commit
+	+ git reset --hard HEAD~1	//Xóa 1 commit hiện tại (HEAD) và xóa toàn bộ thay đổi chưa commit
+	
