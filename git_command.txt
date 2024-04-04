@@ -20,6 +20,7 @@ Khi có sự thay đổi mới nhưng không muốn đẩy lên git hoặc chuy�
 	+ git clean --force	//Xóa toàn bộ file chưa commit
 Xem lại các commit:
 	+ git log
+	+ git log oneline
 
 Sửa lại comment của commit gần nhất
 	+ git --amend
